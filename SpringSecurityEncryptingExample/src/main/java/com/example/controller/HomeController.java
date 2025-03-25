@@ -12,9 +12,17 @@ public class HomeController {
         return "index.html";
     }
 
-    @GetMapping("/ab")
+    @RequestMapping("/ab")
     public String hometwo() {
         return "demo.html";
+    }
+    @RequestMapping("/login")
+    public String showLoginPage() {
+        return "login.html";
+    }
+    @RequestMapping("/logout")
+    public String showLogoutPage() {
+        return "logout.html";
     }
 
 }

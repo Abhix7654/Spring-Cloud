@@ -2,17 +2,15 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Login Page</title>
+    <title>Title</title>
 </head>
 <body>
+<h1>Logout Successfull</h1>
 <h1>Login</h1>
 
 <p style="color:red;">
     <span th:if="${SPRING_SECURITY_LAST_EXCEPTION}" th:text="${SPRING_SECURITY_LAST_EXCEPTION.message}"></span>
 </p>
-
-<!-- Login Form -->
 <form action="/login" method="POST">
     <table>
         <tr>
