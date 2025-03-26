@@ -2,29 +2,11 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Logout Page</title>
 </head>
 <body>
-<h1>Logout Successfull</h1>
-<h1>Login</h1>
-
-<p style="color:red;">
-    <span th:if="${SPRING_SECURITY_LAST_EXCEPTION}" th:text="${SPRING_SECURITY_LAST_EXCEPTION.message}"></span>
-</p>
-<form action="/login" method="POST">
-    <table>
-        <tr>
-            <td>Username:</td>
-            <td><input type="text" name="username" required></td>
-        </tr>
-        <tr>
-            <td>Password:</td>
-            <td><input type="password" name="password" required></td>
-        </tr>
-        <tr>
-            <td colspan="2"><input type="submit" value="Login"></td>
-        </tr>
-    </table>
-</form>
+<h1>You have been successfully logged out!</h1>
+<p><a th:href="@{/login}">Click here to login again</a></p>
 </body>
 </html>

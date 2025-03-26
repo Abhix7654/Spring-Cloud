@@ -9,20 +9,20 @@ public class HomeController {
 
     @RequestMapping("/index")
     public String home() {
-        return "index.html";
+        return "index";
     }
 
     @RequestMapping("/ab")
     public String hometwo() {
-        return "demo.html";
+        return "demo";
     }
     @RequestMapping("/login")
     public String showLoginPage() {
-        return "login.html";
+        return "login";
     }
     @RequestMapping("/logout")
     public String showLogoutPage() {
-        return "logout.html";
+        return "logout";
     }
 
 }

@@ -8,11 +8,10 @@
 <body>
 <h1>Login</h1>
 
-<p style="color:red;">
-    <span th:if="${SPRING_SECURITY_LAST_EXCEPTION}" th:text="${SPRING_SECURITY_LAST_EXCEPTION.message}"></span>
+<p style="color:red;" th:if="${param.error}">
+    Invalid username or password. Please try again.
 </p>
 
-<!-- Login Form -->
 <form action="/login" method="POST">
     <table>
         <tr>

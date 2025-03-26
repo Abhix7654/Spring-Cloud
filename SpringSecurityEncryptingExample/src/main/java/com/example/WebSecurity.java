@@ -35,17 +35,19 @@ public class WebSecurity {
         http
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/login","/logout").permitAll()
+                        .requestMatchers("/login", "/logout", "/logout.html").permitAll()
                         .anyRequest().authenticated()
                 )
                 .formLogin(login -> login
                         .loginPage("/login")
+                        .loginProcessingUrl("/login")
                         .defaultSuccessUrl("/index", true)
+                        .failureUrl("/login?error=true")
                         .permitAll()
                 )
                 .logout(logout -> logout
-                        .logoutUrl("/logout.html")
-                        .logoutSuccessUrl("/logout")
+                        .logoutUrl("/logout")
+                        .logoutSuccessUrl("/logout.html")
                         .invalidateHttpSession(true)
                         .clearAuthentication(true)
                         .permitAll()
